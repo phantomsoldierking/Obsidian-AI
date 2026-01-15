@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-doc-intel",
+  "name": "Obsidian Doc Intelligence",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Local AI-powered document intelligence with RAG over your vault.",
+  "author": "Local",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
