@@ -1,0 +1,15 @@
+fastapi==0.115.8
+uvicorn[standard]==0.34.0
+pydantic==2.10.6
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+sentence-transformers==3.4.1
+transformers==4.48.2
+torch==2.6.0
+qdrant-client==1.13.2
+watchdog==6.0.0
+python-frontmatter==1.1.0
+markdown-it-py==3.0.0
+tensorflow==2.18.0
+numpy==2.0.2
+httpx==0.28.1
