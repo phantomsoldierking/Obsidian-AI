@@ -67,6 +67,19 @@ curl http://127.0.0.1:8000/health
 - Reset vectors: `docker compose down -v`
 - Logs: `docker compose logs -f backend`
 
+## Backend Scripts
+
+From `backend/`:
+
+```bash
+./scripts/bootstrap_dev.sh   # install runtime + dev deps
+./scripts/run_api.sh         # run local FastAPI with reload
+./scripts/run_tests.sh       # run pytest (or fallback compile check)
+./scripts/lint.sh            # ruff checks
+./scripts/format.sh          # black format
+./scripts/smoke_api.sh       # basic API smoke calls against running backend
+```
+
 ## API Examples
 
 Index:
