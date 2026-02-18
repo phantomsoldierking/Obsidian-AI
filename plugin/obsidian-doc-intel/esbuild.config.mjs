@@ -6,7 +6,7 @@ const ctx = await esbuild.context({
   entryPoints: ["src/main.ts"],
   bundle: true,
   format: "cjs",
-  platform: "browser",
+  platform: "node",
   target: "es2020",
   sourcemap: watch ? "inline" : false,
   outfile: "main.js",

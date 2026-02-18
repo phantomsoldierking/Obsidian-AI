@@ -78,7 +78,39 @@ From `backend/`:
 ./scripts/lint.sh            # ruff checks
 ./scripts/format.sh          # black format
 ./scripts/smoke_api.sh       # basic API smoke calls against running backend
+./scripts/sync_agent_skills.sh --vault-path /path/to/vault --agent both
 ```
+
+## Vault Skill Sync (Codex/Claude)
+
+You can store agent skills in either:
+
+- A vault whose root folder name is `skill` or `skills`
+- Or a vault root subfolder named `skills` (default) or `skill`
+
+Supported source layouts:
+
+- `skills/<skill-name>/SKILL.md` (preferred)
+- `skills/<something>.md` (auto-mapped to `<something>/SKILL.md`)
+
+Sync from terminal:
+
+```bash
+cd backend
+./scripts/sync_agent_skills.sh \
+  --vault-path /absolute/path/to/your/vault \
+  --agent both \
+  --mode copy
+```
+
+Useful flags:
+
+- `--source-folder skills`
+- `--codex-target ~/.codex/skills/obsidian-vault`
+- `--claude-target ~/.claude/skills/obsidian-vault`
+- `--agent codex|claude|both`
+- `--mode copy|symlink`
+- `--force` (overwrite unmanaged target folders)
 
 ## API Examples
 
@@ -155,6 +187,8 @@ Required files in that folder:
 - Settings -> Community plugins -> Reload plugins
 - Enable `Obsidian Doc Intelligence`
 - Open plugin settings and set backend URL (default `http://127.0.0.1:8000`)
+- Configure `Agent Skill Sync` paths/mode if needed
+- Click `Sync Codex`, `Sync Claude`, or `Sync Both`
 - Open side panel via ribbon icon or command palette
 
 ## Example Queries
