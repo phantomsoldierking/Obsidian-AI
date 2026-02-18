@@ -1,4 +1,4 @@
-# ObsidianAI - Local Document Intelligence MVP
+# ObsidianAI - Local Document Intelligence
 
 Local AI-powered document intelligence for Obsidian using FastAPI, SentenceTransformers, local `transformers` LLM, TensorFlow query routing, and Qdrant.
 
